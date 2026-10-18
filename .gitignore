@@ -1,0 +1,29 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Model Weights
+models/*.pt
+models/*.onnx
+
+# Data & Video Files (Large files)
+data/*.mp4
+data/*.avi
+data/*.mov
+
+# Generated Logs & Database (Keep sample outputs if desired)
+logs/visitors.db*
+logs/events.log
+logs/entries/*
+logs/exits/*
+!logs/.gitkeep
+
+# IDE / System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
