@@ -53,3 +53,25 @@
 [2026-10-18 16:49:23.108] [INFO] [REGISTRATION] New visitor auto-registered: VISITOR_001 at frame 1 (sim=0.00)
 [2026-10-18 16:49:23.120] [INFO] [ENTRY] Visitor VISITOR_001 (Track #1) entered frame at frame 3. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T16-49-23_109793_entry.jpg
 [2026-10-18 16:49:23.128] [INFO] [EXIT] Visitor VISITOR_001 (Track #1) exited camera frame. Total tracked frames: 5. Snapshot saved: logs/test_run\exits\2026-10-18\VISITOR_001_2026-10-18T16-49-23_123686_exit.jpg
+[2026-10-18 19:41:03.735] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 19:41:03.760] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 19:41:03.770] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 19:41:03.770] [INFO] [REGISTRATION] New visitor auto-registered: VISITOR_001 at frame 1 (sim=0.00)
+[2026-10-18 19:41:03.779] [INFO] [ENTRY] Visitor VISITOR_001 (Track #1) entered frame at frame 3. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T19-41-03_771906_entry.jpg
+[2026-10-18 19:41:03.782] [INFO] [EXIT] Visitor VISITOR_001 (Track #1) exited camera frame. Total tracked frames: 4. Snapshot saved: logs/test_run\exits\2026-10-18\VISITOR_001_2026-10-18T19-41-03_779050_exit.jpg
+[2026-10-18 19:41:03.792] [INFO] [ENTRY] Visitor VISITOR_001 (Track #2) entered frame at frame 23. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T19-41-03_784656_entry.jpg
+[2026-10-18 19:41:03.801] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 19:41:03.802] [INFO] [REGISTRATION] New visitor auto-registered: VISITOR_001 at frame 1 (sim=0.00)
+[2026-10-18 19:41:03.809] [INFO] [ENTRY] Visitor VISITOR_001 (Track #1) entered frame at frame 3. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T19-41-03_802653_entry.jpg
+[2026-10-18 19:41:03.813] [INFO] [EXIT] Visitor VISITOR_001 (Track #1) exited camera frame. Total tracked frames: 5. Snapshot saved: logs/test_run\exits\2026-10-18\VISITOR_001_2026-10-18T19-41-03_810655_exit.jpg
+[2026-10-18 20:08:51.884] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 20:08:51.908] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 20:08:51.917] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 20:08:51.917] [INFO] [REGISTRATION] New visitor auto-registered: VISITOR_001 at frame 1 (sim=0.00)
+[2026-10-18 20:08:51.926] [INFO] [ENTRY] Visitor VISITOR_001 (Track #1) entered frame at frame 3. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T20-08-51_918324_entry.jpg
+[2026-10-18 20:08:51.931] [INFO] [EXIT] Visitor VISITOR_001 (Track #1) exited camera frame. Total tracked frames: 4. Snapshot saved: logs/test_run\exits\2026-10-18\VISITOR_001_2026-10-18T20-08-51_926324_exit.jpg
+[2026-10-18 20:08:51.942] [INFO] [ENTRY] Visitor VISITOR_001 (Track #2) entered frame at frame 23. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T20-08-51_934337_entry.jpg
+[2026-10-18 20:08:51.953] [INFO] Loaded 0 existing visitor identities from database.
+[2026-10-18 20:08:51.954] [INFO] [REGISTRATION] New visitor auto-registered: VISITOR_001 at frame 1 (sim=0.00)
+[2026-10-18 20:08:51.961] [INFO] [ENTRY] Visitor VISITOR_001 (Track #1) entered frame at frame 3. Snapshot saved: logs/test_run\entries\2026-10-18\VISITOR_001_2026-10-18T20-08-51_954484_entry.jpg
+[2026-10-18 20:08:51.967] [INFO] [EXIT] Visitor VISITOR_001 (Track #1) exited camera frame. Total tracked frames: 5. Snapshot saved: logs/test_run\exits\2026-10-18\VISITOR_001_2026-10-18T20-08-51_963490_exit.jpg

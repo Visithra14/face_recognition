@@ -179,6 +179,27 @@ class SQLiteRepository(DatabaseRepository):
                 for row in rows
             ]
 
+    def get_unique_face_count(self) -> int:
+        """Alias for get_unique_visitor_count."""
+        return self.get_unique_visitor_count()
+
+    def get_events(self, limit: int = 50) -> List[EventRecord]:
+        """Alias for get_recent_events."""
+        return self.get_recent_events(limit)
+
+    def get_event_counts(self) -> Dict[str, int]:
+        """Returns total counts for ENTRY and EXIT events."""
+        counts = {"ENTRY": 0, "EXIT": 0}
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT LOWER(event_type), COUNT(*) FROM events GROUP BY LOWER(event_type)")
+            for etype, cnt in cursor.fetchall():
+                if etype == "entry":
+                    counts["ENTRY"] = cnt
+                elif etype == "exit":
+                    counts["EXIT"] = cnt
+        return counts
+
     def close(self) -> None:
         """Executes a WAL checkpoint to ensure all changes are flushed to the main database file."""
         try:

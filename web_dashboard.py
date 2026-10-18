@@ -428,39 +428,58 @@ def stats():
     db_file = "data/faces.db" if os.path.exists("data/faces.db") else DB_PATH
     if SQLiteRepository is not None and os.path.exists(db_file):
         repo = SQLiteRepository(db_file)
-        unique_visitors = repo.get_unique_face_count()
+        unique_visitors = repo.get_unique_visitor_count()
         raw_visitors = repo.get_all_faces()
-        recent_events = repo.get_events(limit=40)
-        event_counts = repo.get_event_counts()
+        recent_events = repo.get_recent_events(limit=50)
+
+        total_entries = 0
+        total_exits = 0
+        try:
+            with repo._get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("SELECT LOWER(event_type), COUNT(*) FROM events GROUP BY LOWER(event_type)")
+                for etype, count in cursor.fetchall():
+                    if etype == "entry":
+                        total_entries = count
+                    elif etype == "exit":
+                        total_exits = count
+        except Exception:
+            pass
 
         visitors = []
         for v in raw_visitors:
             crop_path = v.first_crop_path
-            crop_url = f"/crops/{os.path.relpath(crop_path, 'logs').replace(chr(92), '/')}" if crop_path and os.path.exists(crop_path) else None
+            crop_url = None
+            if crop_path and os.path.exists(crop_path):
+                rel = os.path.relpath(crop_path, "logs").replace(os.sep, "/")
+                crop_url = f"/crops/{rel}"
             visitors.append({
                 "visitor_id": v.face_id,
                 "first_seen": v.first_seen,
                 "last_seen": v.last_seen,
-                "total_visits": v.total_visits,
+                "total_visits": v.visit_count,
                 "crop_url": crop_url
             })
 
         formatted_events = []
         for ev in recent_events:
-            img_path = ev.crop_path
-            crop_url = f"/crops/{os.path.relpath(img_path, 'logs').replace(chr(92), '/')}" if img_path and os.path.exists(img_path) else None
+            img_path = ev.image_path
+            crop_url = None
+            if img_path and os.path.exists(img_path):
+                rel = os.path.relpath(img_path, "logs").replace(os.sep, "/")
+                crop_url = f"/crops/{rel}"
             formatted_events.append({
                 "visitor_id": ev.face_id,
-                "event_type": ev.event_type,
+                "event_type": ev.event_type.upper(),
                 "timestamp": ev.timestamp,
-                "frame_number": ev.frame_idx,
+                "frame_number": ev.track_id,
                 "crop_url": crop_url
             })
 
         return jsonify({
             "unique_visitors": unique_visitors,
-            "total_entries": event_counts.get("ENTRY", 0),
-            "total_exits": event_counts.get("EXIT", 0),
+            "total_entries": total_entries,
+            "total_exits": total_exits,
             "visitors": visitors,
             "recent_events": formatted_events
         })

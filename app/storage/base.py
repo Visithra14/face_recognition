@@ -13,6 +13,10 @@ class FaceRecord:
     visit_count: int = 1
     first_crop_path: Optional[str] = None
 
+    @property
+    def total_visits(self) -> int:
+        return self.visit_count
+
 
 @dataclass
 class EventRecord:
@@ -22,6 +26,14 @@ class EventRecord:
     image_path: str
     track_id: int
     event_id: Optional[int] = None
+
+    @property
+    def crop_path(self) -> str:
+        return self.image_path
+
+    @property
+    def frame_idx(self) -> int:
+        return self.track_id
 
 
 class DatabaseRepository(ABC):
