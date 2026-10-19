@@ -7,7 +7,7 @@ An AI-driven real-time computer vision system that detects, tracks, and recogniz
 ## 📑 Video Demonstration
 
 > **YouTube Explanatory & Demo Video:**  
-> 🔗 https://youtu.be/FsrS1j7x-Pk?si=faD8B80BsZEWCbMj
+> 🔗 https://youtu.be/jGV7qgtsAEc
 ---
 
 ## 📚 Technical Documentation & AI Planning
