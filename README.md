@@ -6,10 +6,8 @@ An AI-driven real-time computer vision system that detects, tracks, and recogniz
 
 ## 📑 Video Demonstration
 
-> **Loom / YouTube Explanatory & Demo Video:**  
-> 🔗 [Insert Your Loom / YouTube Demo Link Here]  
-> *(Note: A recorded video link demonstrating the code in action is required for evaluation).*
-
+> **YouTube Explanatory & Demo Video:**  
+> 🔗 https://youtu.be/FsrS1j7x-Pk?si=faD8B80BsZEWCbMj
 ---
 
 ## 📚 Technical Documentation & AI Planning
